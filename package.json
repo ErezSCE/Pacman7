@@ -13,9 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@testing-library/jest-dom": "^6.9.1",
     "jest-environment-jsdom": "^30.4.1"
+  },
+  "dependencies": {
+    "@testing-library/preact": "^3.2.4",
+    "howler": "^2.2.4"
   }
 }

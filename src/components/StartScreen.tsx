@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import './StartScreen.css';
 import { useEffect, useState } from 'preact/hooks';
 import { AudioManager } from '@/audio/AudioManager';
 

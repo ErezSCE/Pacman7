@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@testing-library/preact": "^4.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@testing-library/jest-dom": "^6.9.1",
     "jest-environment-jsdom": "^30.4.1"
   }

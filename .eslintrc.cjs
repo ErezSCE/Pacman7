@@ -14,13 +14,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['@typescript-eslint', 'preact', 'react', 'react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', 'preact', 'react', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:preact/recommended',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
+
     'plugin:prettier/recommended',
   ],
   settings: {

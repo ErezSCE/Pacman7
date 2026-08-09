@@ -16,7 +16,7 @@
     "howler": "^2.2.4",
     "preact": "^10.15.1",
     "preact-hooks": "^10.15.1",
-    "react-redux": "^8.1.2",
+    "preact-redux": "^4.0.0",
     "workbox-window": "^6.6.0"
   },
   "devDependencies": {

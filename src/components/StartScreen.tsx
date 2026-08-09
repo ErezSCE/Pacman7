@@ -3,20 +3,7 @@ import './StartScreen.css';
 import { useEffect, useState } from 'preact/hooks';
 import { AudioManager } from '@/audio/AudioManager';
 
-// Simple HighScoreService stub
-const HighScoreService = {
-  getTopScores(): Array<{ initials: string; score: number }> {
-    const stored = localStorage.getItem('highScores');
-    if (stored) {
-      try {
-        return JSON.parse(stored);
-      } catch {
-        return [];
-      }
-    }
-    return [];
-  },
-};
+import { HighScoreService } from '@/highscore/HighScoreService';
 
 export const StartScreen = () => {
   const [soundMuted, setSoundMuted] = useState<boolean>(false);

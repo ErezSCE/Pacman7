@@ -1,0 +1,65 @@
+/* Responsive layout and theming for StartScreen */
+:root {
+  /* Default color palette */
+  --ghost-red: #FF0000;
+  --ghost-pink: #FFB8DE;
+  --ghost-blue: #00B2FF;
+  --ghost-orange: #FFB84D;
+  --background: #000000;
+  --foreground: #FFFFFF;
+}
+
+/* Color‑blind palette overrides */
+:root[data-palette='colorblind'] {
+  --ghost-red: #FFB800;   /* orange‑ish for better distinction */
+  --ghost-pink: #FF8C00;  /* dark orange */
+  --ghost-blue: #8B00FF;  /* violet */
+  --ghost-orange: #00FF8B; /* teal */
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: var(--background);
+  color: var(--foreground);
+  text-align: center;
+}
+
+.start-screen h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.start-screen h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 1rem;
+}
+
+.start-screen button {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background: var(--foreground);
+  color: var(--background);
+  border: 2px solid var(--foreground);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Focus-visible styling for accessibility */
+.start-screen button:focus-visible {
+  outline: 3px solid #00FF00; /* bright green outline */
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .start-screen {
+    padding: 1rem;
+  }
+}

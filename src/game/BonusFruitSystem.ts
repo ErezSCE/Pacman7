@@ -109,10 +109,15 @@ export class BonusFruitSystem {
   }
 
   private maybeSpawnFruit(): void {
-    if (this.currentFruit) return; // only one fruit at a time
     if (this.nextSpawnIndex >= this.spawnDots.length) return;
     const target = this.spawnDots[this.nextSpawnIndex];
     if (this.dotCount >= target) {
+      // If a fruit is already present, remove it before spawning the next one
+      if (this.currentFruit) {
+        // Clear existing timeout and notify removal
+        this.clearTimeout();
+        this.onRemove?.(this.currentFruit);
+      }
       // Spawn fruit
       const type = BonusFruitSystem.fruitTypes[this.nextSpawnIndex] ?? 'fruit';
       const points = this.fruitPoints[this.nextSpawnIndex];
